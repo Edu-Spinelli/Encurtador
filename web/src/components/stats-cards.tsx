@@ -72,7 +72,6 @@ export default function StatsCards() {
             </div>
             <div className={`text-3xl font-bold ${card.numberColor} font-mono`}>
               <AnimatedNumber value={value} />
-              {card.suffix && <span className="text-lg ml-0.5">{card.suffix}</span>}
             </div>
           </motion.div>
         );
