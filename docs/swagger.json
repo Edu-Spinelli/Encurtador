@@ -1,0 +1,138 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API para encurtar URLs usando Redis + Cassandra",
+        "title": "Encurtador de URLs API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/shorten": {
+            "post": {
+                "description": "Recebe uma URL longa e retorna uma URL curta",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "shorten"
+                ],
+                "summary": "Encurtar URL",
+                "parameters": [
+                    {
+                        "description": "URL para encurtar",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/shorten.ShortenCommand"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/shorten.ShortenResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    },
+                    "405": {
+                        "description": "Method Not Allowed",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/{shortCode}": {
+            "get": {
+                "description": "Recebe um código curto e redireciona (302) para a URL original",
+                "tags": [
+                    "redirect"
+                ],
+                "summary": "Redirecionar URL curta",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Código curto da URL",
+                        "name": "shortCode",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "Redirect para URL original"
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/dto.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "dto.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "type": "string"
+                },
+                "error": {
+                    "type": "string"
+                }
+            }
+        },
+        "shorten.ShortenCommand": {
+            "type": "object",
+            "required": [
+                "url"
+            ],
+            "properties": {
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "shorten.ShortenResponse": {
+            "type": "object",
+            "properties": {
+                "short_url": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

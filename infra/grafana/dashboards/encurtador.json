@@ -1,0 +1,159 @@
+{
+  "id": null,
+  "uid": "encurtador",
+  "title": "Encurtador de URLs",
+  "tags": ["encurtador", "api"],
+  "timezone": "browser",
+  "refresh": "5s",
+  "time": { "from": "now-1h", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "title": "URLs Encurtadas (total)",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "urls_shortened_total", "legendFormat": "Total" }],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "#6C63FF" },
+          "thresholds": { "mode": "absolute", "steps": [{ "value": null, "color": "#6C63FF" }] }
+        }
+      },
+      "options": { "graphMode": "area", "colorMode": "background" }
+    },
+    {
+      "id": 2,
+      "title": "Redirecionamentos (total)",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "urls_redirected_total", "legendFormat": "Total" }],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "#2EA043" },
+          "thresholds": { "mode": "absolute", "steps": [{ "value": null, "color": "#2EA043" }] }
+        }
+      },
+      "options": { "graphMode": "area", "colorMode": "background" }
+    },
+    {
+      "id": 3,
+      "title": "Cache Hit Rate",
+      "type": "gauge",
+      "gridPos": { "h": 6, "w": 6, "x": 12, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "cache_hits_total / (cache_hits_total + cache_misses_total) * 100", "legendFormat": "Hit %" }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "max": 100,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "red" },
+              { "value": 50, "color": "yellow" },
+              { "value": 80, "color": "green" }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Cache Hits vs Misses",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 18, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "cache_hits_total", "legendFormat": "Hits" },
+        { "expr": "cache_misses_total", "legendFormat": "Misses" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "#FF9800" },
+          "thresholds": { "mode": "absolute", "steps": [{ "value": null, "color": "#FF9800" }] }
+        }
+      },
+      "options": { "graphMode": "none", "colorMode": "background" }
+    },
+    {
+      "id": 5,
+      "title": "Requisicoes por segundo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 6 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "rate(http_requests_total{path=\"/shorten\"}[1m])", "legendFormat": "POST /shorten" },
+        { "expr": "rate(http_requests_total{path=\"/{shortCode}\"}[1m])", "legendFormat": "GET /{shortCode}" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 20, "lineWidth": 2 },
+          "unit": "reqps"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "title": "Latencia (p50 / p95 / p99)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 6 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "histogram_quantile(0.50, rate(http_request_duration_seconds_bucket[1m]))", "legendFormat": "p50" },
+        { "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[1m]))", "legendFormat": "p95" },
+        { "expr": "histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[1m]))", "legendFormat": "p99" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 10, "lineWidth": 2 },
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "title": "Requisicoes por Status Code",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 14 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "rate(http_requests_total{status=\"201\"}[1m])", "legendFormat": "201 Created" },
+        { "expr": "rate(http_requests_total{status=\"302\"}[1m])", "legendFormat": "302 Redirect" },
+        { "expr": "rate(http_requests_total{status=\"404\"}[1m])", "legendFormat": "404 Not Found" },
+        { "expr": "rate(http_requests_total{status=\"400\"}[1m])", "legendFormat": "400 Bad Request" },
+        { "expr": "rate(http_requests_total{status=\"500\"}[1m])", "legendFormat": "500 Error" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 20, "lineWidth": 2 },
+          "unit": "reqps"
+        },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "404 Not Found" }, "properties": [{ "id": "color", "value": { "fixedColor": "orange", "mode": "fixed" } }] },
+          { "matcher": { "id": "byName", "options": "500 Error" }, "properties": [{ "id": "color", "value": { "fixedColor": "red", "mode": "fixed" } }] }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "title": "URLs encurtadas por minuto",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 14 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "rate(urls_shortened_total[1m]) * 60", "legendFormat": "Encurtadas/min" },
+        { "expr": "rate(urls_redirected_total[1m]) * 60", "legendFormat": "Redirecionamentos/min" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 30, "lineWidth": 2, "drawStyle": "bars" },
+          "unit": "short"
+        }
+      }
+    }
+  ],
+  "schemaVersion": 38
+}

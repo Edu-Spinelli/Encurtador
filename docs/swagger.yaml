@@ -1,0 +1,90 @@
+basePath: /
+definitions:
+  dto.ErrorResponse:
+    properties:
+      details:
+        type: string
+      error:
+        type: string
+    type: object
+  shorten.ShortenCommand:
+    properties:
+      url:
+        type: string
+    required:
+    - url
+    type: object
+  shorten.ShortenResponse:
+    properties:
+      short_url:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: API para encurtar URLs usando Redis + Cassandra
+  title: Encurtador de URLs API
+  version: "1.0"
+paths:
+  /{shortCode}:
+    get:
+      description: Recebe um código curto e redireciona (302) para a URL original
+      parameters:
+      - description: Código curto da URL
+        in: path
+        name: shortCode
+        required: true
+        type: string
+      responses:
+        "302":
+          description: Redirect para URL original
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Redirecionar URL curta
+      tags:
+      - redirect
+  /shorten:
+    post:
+      consumes:
+      - application/json
+      description: Recebe uma URL longa e retorna uma URL curta
+      parameters:
+      - description: URL para encurtar
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/shorten.ShortenCommand'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/shorten.ShortenResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+        "405":
+          description: Method Not Allowed
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Encurtar URL
+      tags:
+      - shorten
+swagger: "2.0"

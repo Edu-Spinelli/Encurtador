@@ -1,0 +1,10 @@
+.env
+.env.production
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/

@@ -1,0 +1,5 @@
+web/
+frontend/
+.env
+.git
+*.md
