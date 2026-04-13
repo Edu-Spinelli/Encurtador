@@ -14,7 +14,8 @@ type Config struct {
 	AllowedOrigins []string
 	RedisURL       string
 	RedisStartOffset int64
-	DatabaseURL    string
+	DatabaseURL     string
+	DatabaseReadURL string
 	HashSalt       string
 	HashPepper     string
 	HashMinLength  int
@@ -30,6 +31,7 @@ func Load() *Config {
 		RedisURL:         getEnv("REDIS_URL", "redis://127.0.0.1:6379"),
 		RedisStartOffset: getEnvInt64("REDIS_START_OFFSET", 14_000_000),
 		DatabaseURL:      getEnv("DATABASE_URL", "postgres://postgres:postgres@127.0.0.1:5432/encurtador?sslmode=disable"),
+		DatabaseReadURL:  getEnv("DATABASE_READ_URL", getEnv("DATABASE_URL", "postgres://postgres:postgres@127.0.0.1:5432/encurtador?sslmode=disable")),
 		HashSalt:         getEnv("HASH_SALT", ""),
 		HashPepper:       getEnv("HASH_PEPPER", ""),
 		HashMinLength:    getEnvInt("HASH_MIN_LENGTH", 6),

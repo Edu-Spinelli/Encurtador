@@ -1,0 +1,45 @@
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#7c3aed', 'primaryTextColor': '#fff', 'primaryBorderColor': '#7c3aed', 'lineColor': '#a78bfa', 'secondaryColor': '#1e1b4b', 'tertiaryColor': '#0f172a', 'background': '#09090b', 'mainBkg': '#18181b', 'nodeBorder': '#3f3f46', 'clusterBkg': '#18181b', 'clusterBorder': '#3f3f46', 'titleColor': '#fafafa', 'edgeLabelBackground': '#18181b', 'fontFamily': 'system-ui' }}}%%
+
+flowchart TB
+    subgraph CLIENT["Frontend (Next.js / Vercel)"]
+        UI["Interface do usuario"]
+    end
+
+    subgraph API["Go API (Railway)"]
+        direction TB
+        SHORTEN["POST /shorten<br/>(Command)"]
+        REDIRECT["GET /{code}<br/>(Query)"]
+        STATS["GET /stats"]
+    end
+
+    subgraph REDIS_LAYER["Redis"]
+        INCR["INCR<br/>ID atomico"]
+        CACHE["Cache<br/>TTL 24h"]
+    end
+
+    subgraph ENCODE["Encoding"]
+        HASH["HashIDs<br/>Base62 + Salt + Pepper"]
+    end
+
+    subgraph DB["PostgreSQL"]
+        PG[("urls table<br/>short_code | long_url | created_at")]
+    end
+
+    UI -->|"POST /shorten"| SHORTEN
+    UI -->|"GET /{code}"| REDIRECT
+    UI -->|"GET /stats"| STATS
+
+    SHORTEN --> INCR
+    INCR --> HASH
+    HASH -->|"salvar"| PG
+
+    REDIRECT --> CACHE
+    CACHE -->|"hit"| UI
+    CACHE -->|"miss"| PG
+    PG -->|"302 redirect"| UI
+
+    style CLIENT fill:#1e1b4b,stroke:#7c3aed,stroke-width:2px
+    style API fill:#18181b,stroke:#7c3aed,stroke-width:2px
+    style REDIS_LAYER fill:#1c1917,stroke:#dc2626,stroke-width:2px
+    style ENCODE fill:#1a2e05,stroke:#65a30d,stroke-width:2px
+    style DB fill:#0c1a3a,stroke:#3b82f6,stroke-width:2px

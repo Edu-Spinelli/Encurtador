@@ -1,0 +1,18 @@
+db_password = "TROQUE-POR-UMA-SENHA-FORTE"
+hash_salt   = "TROQUE-POR-UM-SALT-SEGURO"
+hash_pepper = "TROQUE-POR-UM-PEPPER-SEGURO"
+app_image   = "SEU-ACCOUNT-ID.dkr.ecr.us-east-1.amazonaws.com/encurtador:latest"
+
+# Toggles por etapa do benchmark:
+# Etapa 1: todos false, ecs_desired_count=1 (mas na pratica rodamos Go na EC2 do K6)
+# Etapa 2: enable_redis=true
+# Etapa 3: enable_redis=true, enable_alb=true, ecs_desired_count=3
+# Etapa 4: + enable_read_replica=true
+# Etapa 5: + enable_autoscaling=true, ecs_max_count=10
+
+enable_redis        = false
+enable_alb          = false
+enable_read_replica = false
+enable_autoscaling  = false
+ecs_desired_count   = 1
+ecs_max_count       = 10

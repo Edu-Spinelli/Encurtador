@@ -1,0 +1,1165 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /home/ubuntu/k6-test.js
+        output: -
+
+     scenarios: (100.00%) 3 scenarios, 1100 max VUs, 4m5s max duration (incl. graceful stop):
+              * seed: 500 iterations shared among 10 VUs (maxDuration: 30s, exec: seedUrls, gracefulStop: 30s)
+              * read: Up to 1000 looping VUs for 3m0s over 4 stages (gracefulRampDown: 30s, exec: readTest, startTime: 35s, gracefulStop: 30s)
+              * write: Up to 100 looping VUs for 3m0s over 4 stages (gracefulRampDown: 30s, exec: writeTest, startTime: 35s, gracefulStop: 30s)
+
+
+Run     [ 100% ] setup()
+seed    [   0% ]
+read    [   0% ]
+write   [   0% ]
+time="2026-04-13T03:42:01Z" level=info msg="Seeded 200 URLs for read tests" source=console
+
+running (0m01.7s), 0010/1100 VUs, 248 complete and 0 interrupted iterations
+seed    [  50% ] 10 VUs   01.0s/30s  248/500 shared iters
+read  • [   0% ] waiting  34.0s     
+write • [   0% ] waiting  34.0s     
+
+running (0m02.7s), 0010/1100 VUs, 478 complete and 0 interrupted iterations
+seed    [  96% ] 10 VUs   02.0s/30s  478/500 shared iters
+read  • [   0% ] waiting  33.0s     
+write • [   0% ] waiting  33.0s     
+
+running (0m03.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  32.0s     
+write • [   0% ] waiting  32.0s     
+
+running (0m04.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  31.0s     
+write • [   0% ] waiting  31.0s     
+
+running (0m05.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  30.0s     
+write • [   0% ] waiting  30.0s     
+
+running (0m06.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  29.0s     
+write • [   0% ] waiting  29.0s     
+
+running (0m07.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  28.0s     
+write • [   0% ] waiting  28.0s     
+
+running (0m08.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  27.0s     
+write • [   0% ] waiting  27.0s     
+
+running (0m09.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  26.0s     
+write • [   0% ] waiting  26.0s     
+
+running (0m10.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  25.0s     
+write • [   0% ] waiting  25.0s     
+
+running (0m11.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  24.0s     
+write • [   0% ] waiting  24.0s     
+
+running (0m12.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  23.0s     
+write • [   0% ] waiting  23.0s     
+
+running (0m13.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  22.0s     
+write • [   0% ] waiting  22.0s     
+
+running (0m14.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  21.0s     
+write • [   0% ] waiting  21.0s     
+
+running (0m15.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  20.0s     
+write • [   0% ] waiting  20.0s     
+
+running (0m16.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  19.0s     
+write • [   0% ] waiting  19.0s     
+
+running (0m17.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  18.0s     
+write • [   0% ] waiting  18.0s     
+
+running (0m18.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  17.0s     
+write • [   0% ] waiting  17.0s     
+
+running (0m19.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  16.0s     
+write • [   0% ] waiting  16.0s     
+
+running (0m20.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  15.0s     
+write • [   0% ] waiting  15.0s     
+
+running (0m21.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  14.0s     
+write • [   0% ] waiting  14.0s     
+
+running (0m22.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  13.0s     
+write • [   0% ] waiting  13.0s     
+
+running (0m23.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  12.0s     
+write • [   0% ] waiting  12.0s     
+
+running (0m24.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  11.0s     
+write • [   0% ] waiting  11.0s     
+
+running (0m25.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  10.0s     
+write • [   0% ] waiting  10.0s     
+
+running (0m26.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  09.0s     
+write • [   0% ] waiting  09.0s     
+
+running (0m27.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  08.0s     
+write • [   0% ] waiting  08.0s     
+
+running (0m28.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  07.0s     
+write • [   0% ] waiting  07.0s     
+
+running (0m29.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  06.0s     
+write • [   0% ] waiting  06.0s     
+
+running (0m30.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  05.0s     
+write • [   0% ] waiting  05.0s     
+
+running (0m31.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  04.0s     
+write • [   0% ] waiting  04.0s     
+
+running (0m32.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  03.0s     
+write • [   0% ] waiting  03.0s     
+
+running (0m33.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  02.0s     
+write • [   0% ] waiting  02.0s     
+
+running (0m34.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  01.0s     
+write • [   0% ] waiting  01.0s     
+
+running (0m35.7s), 0000/1100 VUs, 500 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs   02.1s/30s  500/500 shared iters
+read  • [   0% ] waiting  00.0s     
+write • [   0% ] waiting  00.0s     
+
+running (0m36.7s), 0017/1100 VUs, 5044 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   1% ] 0016/1000 VUs  0m01.0s/3m00.0s
+write   [   1% ] 001/100 VUs    0m01.0s/3m00.0s
+
+running (0m37.7s), 0035/1100 VUs, 17017 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   1% ] 0032/1000 VUs  0m02.0s/3m00.0s
+write   [   1% ] 003/100 VUs    0m02.0s/3m00.0s
+
+running (0m38.7s), 0053/1100 VUs, 32241 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   2% ] 0049/1000 VUs  0m03.0s/3m00.0s
+write   [   2% ] 004/100 VUs    0m03.0s/3m00.0s
+
+running (0m39.7s), 0072/1100 VUs, 48085 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   2% ] 0066/1000 VUs  0m04.0s/3m00.0s
+write   [   2% ] 006/100 VUs    0m04.0s/3m00.0s
+
+running (0m40.7s), 0090/1100 VUs, 64192 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   3% ] 0082/1000 VUs  0m05.0s/3m00.0s
+write   [   3% ] 008/100 VUs    0m05.0s/3m00.0s
+
+running (0m41.7s), 0108/1100 VUs, 79486 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   3% ] 0099/1000 VUs  0m06.0s/3m00.0s
+write   [   3% ] 009/100 VUs    0m06.0s/3m00.0s
+
+running (0m42.7s), 0127/1100 VUs, 94676 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   4% ] 0116/1000 VUs  0m07.0s/3m00.0s
+write   [   4% ] 011/100 VUs    0m07.0s/3m00.0s
+
+running (0m43.7s), 0143/1100 VUs, 109888 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   4% ] 0130/1000 VUs  0m08.0s/3m00.0s
+write   [   4% ] 013/100 VUs    0m08.0s/3m00.0s
+
+running (0m44.7s), 0163/1100 VUs, 125325 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   5% ] 0149/1000 VUs  0m09.0s/3m00.0s
+write   [   5% ] 014/100 VUs    0m09.0s/3m00.0s
+
+running (0m45.7s), 0182/1100 VUs, 140723 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   6% ] 0166/1000 VUs  0m10.0s/3m00.0s
+write   [   6% ] 016/100 VUs    0m10.0s/3m00.0s
+
+running (0m46.7s), 0200/1100 VUs, 156298 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   6% ] 0182/1000 VUs  0m11.0s/3m00.0s
+write   [   6% ] 018/100 VUs    0m11.0s/3m00.0s
+
+running (0m47.7s), 0218/1100 VUs, 171392 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   7% ] 0199/1000 VUs  0m12.0s/3m00.0s
+write   [   7% ] 019/100 VUs    0m12.0s/3m00.0s
+
+running (0m48.7s), 0237/1100 VUs, 186953 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   7% ] 0216/1000 VUs  0m13.0s/3m00.0s
+write   [   7% ] 021/100 VUs    0m13.0s/3m00.0s
+
+running (0m49.8s), 0258/1100 VUs, 203806 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   8% ] 0235/1000 VUs  0m14.1s/3m00.0s
+write   [   8% ] 023/100 VUs    0m14.1s/3m00.0s
+
+running (0m50.7s), 0273/1100 VUs, 217324 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   8% ] 0249/1000 VUs  0m15.0s/3m00.0s
+write   [   8% ] 024/100 VUs    0m15.0s/3m00.0s
+
+running (0m51.7s), 0292/1100 VUs, 231937 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   9% ] 0266/1000 VUs  0m16.0s/3m00.0s
+write   [   9% ] 026/100 VUs    0m16.0s/3m00.0s
+
+running (0m52.7s), 0310/1100 VUs, 247295 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [   9% ] 0282/1000 VUs  0m17.0s/3m00.0s
+write   [   9% ] 028/100 VUs    0m17.0s/3m00.0s
+
+running (0m53.7s), 0328/1100 VUs, 263033 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  10% ] 0299/1000 VUs  0m18.0s/3m00.0s
+write   [  10% ] 029/100 VUs    0m18.0s/3m00.0s
+
+running (0m54.7s), 0347/1100 VUs, 278090 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  11% ] 0316/1000 VUs  0m19.0s/3m00.0s
+write   [  11% ] 031/100 VUs    0m19.0s/3m00.0s
+
+running (0m55.7s), 0365/1100 VUs, 293184 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  11% ] 0332/1000 VUs  0m20.0s/3m00.0s
+write   [  11% ] 033/100 VUs    0m20.0s/3m00.0s
+
+running (0m56.7s), 0383/1100 VUs, 308603 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  12% ] 0349/1000 VUs  0m21.0s/3m00.0s
+write   [  12% ] 034/100 VUs    0m21.0s/3m00.0s
+
+running (0m57.7s), 0402/1100 VUs, 324298 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  12% ] 0366/1000 VUs  0m22.0s/3m00.0s
+write   [  12% ] 036/100 VUs    0m22.0s/3m00.0s
+
+running (0m58.7s), 0420/1100 VUs, 338983 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  13% ] 0382/1000 VUs  0m23.0s/3m00.0s
+write   [  13% ] 038/100 VUs    0m23.0s/3m00.0s
+
+running (0m59.7s), 0438/1100 VUs, 353315 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  13% ] 0399/1000 VUs  0m24.0s/3m00.0s
+write   [  13% ] 039/100 VUs    0m24.0s/3m00.0s
+
+running (1m00.7s), 0457/1100 VUs, 366088 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  14% ] 0416/1000 VUs  0m25.0s/3m00.0s
+write   [  14% ] 041/100 VUs    0m25.0s/3m00.0s
+
+running (1m01.7s), 0475/1100 VUs, 372106 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  14% ] 0432/1000 VUs  0m26.0s/3m00.0s
+write   [  14% ] 043/100 VUs    0m26.0s/3m00.0s
+
+running (1m02.7s), 0493/1100 VUs, 378741 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  15% ] 0449/1000 VUs  0m27.0s/3m00.0s
+write   [  15% ] 044/100 VUs    0m27.0s/3m00.0s
+
+running (1m03.7s), 0512/1100 VUs, 384195 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  16% ] 0466/1000 VUs  0m28.0s/3m00.0s
+write   [  16% ] 046/100 VUs    0m28.0s/3m00.0s
+
+running (1m04.7s), 0531/1100 VUs, 396750 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  16% ] 0483/1000 VUs  0m29.0s/3m00.0s
+write   [  16% ] 048/100 VUs    0m29.0s/3m00.0s
+
+running (1m05.7s), 0548/1100 VUs, 410933 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  17% ] 0499/1000 VUs  0m30.0s/3m00.0s
+write   [  17% ] 049/100 VUs    0m30.0s/3m00.0s
+
+running (1m06.7s), 0558/1100 VUs, 425537 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  17% ] 0508/1000 VUs  0m31.0s/3m00.0s
+write   [  17% ] 050/100 VUs    0m31.0s/3m00.0s
+
+running (1m07.7s), 0567/1100 VUs, 440531 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  18% ] 0516/1000 VUs  0m32.0s/3m00.0s
+write   [  18% ] 051/100 VUs    0m32.0s/3m00.0s
+
+running (1m08.7s), 0576/1100 VUs, 455693 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  18% ] 0524/1000 VUs  0m33.0s/3m00.0s
+write   [  18% ] 052/100 VUs    0m33.0s/3m00.0s
+
+running (1m09.7s), 0586/1100 VUs, 471000 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  19% ] 0533/1000 VUs  0m34.0s/3m00.0s
+write   [  19% ] 053/100 VUs    0m34.0s/3m00.0s
+
+running (1m10.7s), 0595/1100 VUs, 486148 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  19% ] 0541/1000 VUs  0m35.0s/3m00.0s
+write   [  19% ] 054/100 VUs    0m35.0s/3m00.0s
+
+running (1m11.7s), 0603/1100 VUs, 501674 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  20% ] 0549/1000 VUs  0m36.0s/3m00.0s
+write   [  20% ] 054/100 VUs    0m36.0s/3m00.0s
+
+running (1m12.7s), 0613/1100 VUs, 516608 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  21% ] 0558/1000 VUs  0m37.0s/3m00.0s
+write   [  21% ] 055/100 VUs    0m37.0s/3m00.0s
+
+running (1m13.7s), 0622/1100 VUs, 531701 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  21% ] 0566/1000 VUs  0m38.0s/3m00.0s
+write   [  21% ] 056/100 VUs    0m38.0s/3m00.0s
+
+running (1m14.8s), 0632/1100 VUs, 546716 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  22% ] 0575/1000 VUs  0m39.1s/3m00.0s
+write   [  22% ] 057/100 VUs    0m39.1s/3m00.0s
+
+running (1m15.8s), 0642/1100 VUs, 562019 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  22% ] 0584/1000 VUs  0m40.1s/3m00.0s
+write   [  22% ] 058/100 VUs    0m40.1s/3m00.0s
+
+running (1m16.7s), 0650/1100 VUs, 576291 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  23% ] 0591/1000 VUs  0m41.0s/3m00.0s
+write   [  23% ] 059/100 VUs    0m41.0s/3m00.0s
+
+running (1m17.7s), 0658/1100 VUs, 591293 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  23% ] 0599/1000 VUs  0m42.0s/3m00.0s
+write   [  23% ] 059/100 VUs    0m42.0s/3m00.0s
+
+running (1m18.7s), 0668/1100 VUs, 606131 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  24% ] 0608/1000 VUs  0m43.0s/3m00.0s
+write   [  24% ] 060/100 VUs    0m43.0s/3m00.0s
+
+running (1m19.7s), 0677/1100 VUs, 621321 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  24% ] 0616/1000 VUs  0m44.0s/3m00.0s
+write   [  24% ] 061/100 VUs    0m44.0s/3m00.0s
+
+running (1m20.7s), 0686/1100 VUs, 636109 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  25% ] 0624/1000 VUs  0m45.0s/3m00.0s
+write   [  25% ] 062/100 VUs    0m45.0s/3m00.0s
+
+running (1m21.7s), 0696/1100 VUs, 651225 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  26% ] 0633/1000 VUs  0m46.0s/3m00.0s
+write   [  26% ] 063/100 VUs    0m46.0s/3m00.0s
+
+running (1m22.7s), 0705/1100 VUs, 665926 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  26% ] 0641/1000 VUs  0m47.0s/3m00.0s
+write   [  26% ] 064/100 VUs    0m47.0s/3m00.0s
+
+running (1m23.7s), 0713/1100 VUs, 680665 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  27% ] 0649/1000 VUs  0m48.0s/3m00.0s
+write   [  27% ] 064/100 VUs    0m48.0s/3m00.0s
+
+running (1m24.7s), 0723/1100 VUs, 695297 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  27% ] 0658/1000 VUs  0m49.0s/3m00.0s
+write   [  27% ] 065/100 VUs    0m49.0s/3m00.0s
+
+running (1m25.7s), 0732/1100 VUs, 710373 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  28% ] 0666/1000 VUs  0m50.0s/3m00.0s
+write   [  28% ] 066/100 VUs    0m50.0s/3m00.0s
+
+running (1m26.7s), 0741/1100 VUs, 725342 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  28% ] 0674/1000 VUs  0m51.0s/3m00.0s
+write   [  28% ] 067/100 VUs    0m51.0s/3m00.0s
+
+running (1m27.7s), 0751/1100 VUs, 739831 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  29% ] 0683/1000 VUs  0m52.0s/3m00.0s
+write   [  29% ] 068/100 VUs    0m52.0s/3m00.0s
+
+running (1m28.7s), 0760/1100 VUs, 754097 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  29% ] 0691/1000 VUs  0m53.0s/3m00.0s
+write   [  29% ] 069/100 VUs    0m53.0s/3m00.0s
+
+running (1m29.7s), 0768/1100 VUs, 769650 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  30% ] 0699/1000 VUs  0m54.0s/3m00.0s
+write   [  30% ] 069/100 VUs    0m54.0s/3m00.0s
+
+running (1m30.7s), 0778/1100 VUs, 784759 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  31% ] 0708/1000 VUs  0m55.0s/3m00.0s
+write   [  31% ] 070/100 VUs    0m55.0s/3m00.0s
+
+running (1m31.7s), 0787/1100 VUs, 799383 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  31% ] 0716/1000 VUs  0m56.0s/3m00.0s
+write   [  31% ] 071/100 VUs    0m56.0s/3m00.0s
+
+running (1m32.7s), 0796/1100 VUs, 814214 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  32% ] 0724/1000 VUs  0m57.0s/3m00.0s
+write   [  32% ] 072/100 VUs    0m57.0s/3m00.0s
+
+running (1m33.7s), 0806/1100 VUs, 829124 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  32% ] 0733/1000 VUs  0m58.0s/3m00.0s
+write   [  32% ] 073/100 VUs    0m58.0s/3m00.0s
+
+running (1m34.7s), 0815/1100 VUs, 843079 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  33% ] 0741/1000 VUs  0m59.0s/3m00.0s
+write   [  33% ] 074/100 VUs    0m59.0s/3m00.0s
+
+running (1m35.7s), 0823/1100 VUs, 857770 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  33% ] 0749/1000 VUs  1m00.0s/3m00.0s
+write   [  33% ] 074/100 VUs    1m00.0s/3m00.0s
+
+running (1m36.7s), 0833/1100 VUs, 873275 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  34% ] 0758/1000 VUs  1m01.0s/3m00.0s
+write   [  34% ] 075/100 VUs    1m01.0s/3m00.0s
+
+running (1m37.7s), 0842/1100 VUs, 889845 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  34% ] 0766/1000 VUs  1m02.0s/3m00.0s
+write   [  34% ] 076/100 VUs    1m02.0s/3m00.0s
+
+running (1m38.7s), 0851/1100 VUs, 904326 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  35% ] 0774/1000 VUs  1m03.0s/3m00.0s
+write   [  35% ] 077/100 VUs    1m03.0s/3m00.0s
+
+running (1m39.7s), 0861/1100 VUs, 919525 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  36% ] 0783/1000 VUs  1m04.0s/3m00.0s
+write   [  36% ] 078/100 VUs    1m04.0s/3m00.0s
+
+running (1m40.7s), 0870/1100 VUs, 934028 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  36% ] 0791/1000 VUs  1m05.0s/3m00.0s
+write   [  36% ] 079/100 VUs    1m05.0s/3m00.0s
+
+running (1m41.8s), 0880/1100 VUs, 951575 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  37% ] 0800/1000 VUs  1m06.1s/3m00.0s
+write   [  37% ] 080/100 VUs    1m06.1s/3m00.0s
+
+running (1m42.7s), 0888/1100 VUs, 965321 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  37% ] 0808/1000 VUs  1m07.0s/3m00.0s
+write   [  37% ] 080/100 VUs    1m07.0s/3m00.0s
+
+running (1m43.7s), 0897/1100 VUs, 979423 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  38% ] 0816/1000 VUs  1m08.0s/3m00.0s
+write   [  38% ] 081/100 VUs    1m08.0s/3m00.0s
+
+running (1m44.7s), 0906/1100 VUs, 994990 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  38% ] 0824/1000 VUs  1m09.0s/3m00.0s
+write   [  38% ] 082/100 VUs    1m09.0s/3m00.0s
+
+running (1m45.7s), 0916/1100 VUs, 1009235 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  39% ] 0833/1000 VUs  1m10.0s/3m00.0s
+write   [  39% ] 083/100 VUs    1m10.0s/3m00.0s
+
+running (1m46.7s), 0925/1100 VUs, 1023454 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  39% ] 0841/1000 VUs  1m11.0s/3m00.0s
+write   [  39% ] 084/100 VUs    1m11.0s/3m00.0s
+
+running (1m47.7s), 0933/1100 VUs, 1039064 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  40% ] 0849/1000 VUs  1m12.0s/3m00.0s
+write   [  40% ] 084/100 VUs    1m12.0s/3m00.0s
+
+running (1m48.7s), 0943/1100 VUs, 1054548 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  41% ] 0858/1000 VUs  1m13.0s/3m00.0s
+write   [  41% ] 085/100 VUs    1m13.0s/3m00.0s
+
+running (1m49.7s), 0952/1100 VUs, 1068702 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  41% ] 0866/1000 VUs  1m14.0s/3m00.0s
+write   [  41% ] 086/100 VUs    1m14.0s/3m00.0s
+
+running (1m50.7s), 0961/1100 VUs, 1082815 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  42% ] 0874/1000 VUs  1m15.0s/3m00.0s
+write   [  42% ] 087/100 VUs    1m15.0s/3m00.0s
+
+running (1m51.7s), 0971/1100 VUs, 1098992 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  42% ] 0883/1000 VUs  1m16.0s/3m00.0s
+write   [  42% ] 088/100 VUs    1m16.0s/3m00.0s
+
+running (1m52.7s), 0980/1100 VUs, 1113251 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  43% ] 0891/1000 VUs  1m17.0s/3m00.0s
+write   [  43% ] 089/100 VUs    1m17.0s/3m00.0s
+
+running (1m53.7s), 0988/1100 VUs, 1127861 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  43% ] 0899/1000 VUs  1m18.0s/3m00.0s
+write   [  43% ] 089/100 VUs    1m18.0s/3m00.0s
+
+running (1m54.7s), 0998/1100 VUs, 1143920 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  44% ] 0908/1000 VUs  1m19.0s/3m00.0s
+write   [  44% ] 090/100 VUs    1m19.0s/3m00.0s
+
+running (1m55.7s), 1007/1100 VUs, 1157676 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  44% ] 0916/1000 VUs  1m20.0s/3m00.0s
+write   [  44% ] 091/100 VUs    1m20.0s/3m00.0s
+
+running (1m56.7s), 1016/1100 VUs, 1173204 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  45% ] 0924/1000 VUs  1m21.0s/3m00.0s
+write   [  45% ] 092/100 VUs    1m21.0s/3m00.0s
+
+running (1m57.7s), 1026/1100 VUs, 1187794 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  46% ] 0933/1000 VUs  1m22.0s/3m00.0s
+write   [  46% ] 093/100 VUs    1m22.0s/3m00.0s
+
+running (1m58.7s), 1035/1100 VUs, 1203440 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  46% ] 0941/1000 VUs  1m23.0s/3m00.0s
+write   [  46% ] 094/100 VUs    1m23.0s/3m00.0s
+
+running (1m59.7s), 1043/1100 VUs, 1218399 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  47% ] 0949/1000 VUs  1m24.0s/3m00.0s
+write   [  47% ] 094/100 VUs    1m24.0s/3m00.0s
+
+running (2m00.8s), 1054/1100 VUs, 1233017 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  47% ] 0959/1000 VUs  1m25.1s/3m00.0s
+write   [  47% ] 095/100 VUs    1m25.1s/3m00.0s
+
+running (2m01.7s), 1062/1100 VUs, 1238006 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  48% ] 0966/1000 VUs  1m26.0s/3m00.0s
+write   [  48% ] 096/100 VUs    1m26.0s/3m00.0s
+
+running (2m02.7s), 1071/1100 VUs, 1244788 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  48% ] 0974/1000 VUs  1m27.0s/3m00.0s
+write   [  48% ] 097/100 VUs    1m27.0s/3m00.0s
+
+running (2m03.7s), 1081/1100 VUs, 1254460 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  49% ] 0983/1000 VUs  1m28.0s/3m00.0s
+write   [  49% ] 098/100 VUs    1m28.0s/3m00.0s
+
+running (2m04.7s), 1090/1100 VUs, 1268506 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  49% ] 0991/1000 VUs  1m29.0s/3m00.0s
+write   [  49% ] 099/100 VUs    1m29.0s/3m00.0s
+
+running (2m05.7s), 1098/1100 VUs, 1282422 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  50% ] 0999/1000 VUs  1m30.0s/3m00.0s
+write   [  50% ] 099/100 VUs    1m30.0s/3m00.0s
+
+running (2m06.7s), 1100/1100 VUs, 1298198 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  51% ] 1000/1000 VUs  1m31.0s/3m00.0s
+write   [  51% ] 100/100 VUs    1m31.0s/3m00.0s
+
+running (2m07.7s), 1100/1100 VUs, 1311976 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  51% ] 1000/1000 VUs  1m32.0s/3m00.0s
+write   [  51% ] 100/100 VUs    1m32.0s/3m00.0s
+
+running (2m08.7s), 1100/1100 VUs, 1325119 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  52% ] 1000/1000 VUs  1m33.0s/3m00.0s
+write   [  52% ] 100/100 VUs    1m33.0s/3m00.0s
+
+running (2m09.7s), 1100/1100 VUs, 1341835 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  52% ] 1000/1000 VUs  1m34.0s/3m00.0s
+write   [  52% ] 100/100 VUs    1m34.0s/3m00.0s
+
+running (2m10.7s), 1100/1100 VUs, 1356714 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  53% ] 1000/1000 VUs  1m35.0s/3m00.0s
+write   [  53% ] 100/100 VUs    1m35.0s/3m00.0s
+
+running (2m11.7s), 1100/1100 VUs, 1372544 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  53% ] 1000/1000 VUs  1m36.0s/3m00.0s
+write   [  53% ] 100/100 VUs    1m36.0s/3m00.0s
+
+running (2m12.7s), 1100/1100 VUs, 1387569 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  54% ] 1000/1000 VUs  1m37.0s/3m00.0s
+write   [  54% ] 100/100 VUs    1m37.0s/3m00.0s
+
+running (2m13.7s), 1100/1100 VUs, 1402920 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  54% ] 1000/1000 VUs  1m38.0s/3m00.0s
+write   [  54% ] 100/100 VUs    1m38.0s/3m00.0s
+
+running (2m14.7s), 1100/1100 VUs, 1418869 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  55% ] 1000/1000 VUs  1m39.0s/3m00.0s
+write   [  55% ] 100/100 VUs    1m39.0s/3m00.0s
+
+running (2m15.7s), 1100/1100 VUs, 1433192 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  56% ] 1000/1000 VUs  1m40.0s/3m00.0s
+write   [  56% ] 100/100 VUs    1m40.0s/3m00.0s
+
+running (2m16.7s), 1100/1100 VUs, 1448973 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  56% ] 1000/1000 VUs  1m41.0s/3m00.0s
+write   [  56% ] 100/100 VUs    1m41.0s/3m00.0s
+
+running (2m17.7s), 1100/1100 VUs, 1463029 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  57% ] 1000/1000 VUs  1m42.0s/3m00.0s
+write   [  57% ] 100/100 VUs    1m42.0s/3m00.0s
+
+running (2m18.7s), 1100/1100 VUs, 1478641 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  57% ] 1000/1000 VUs  1m43.0s/3m00.0s
+write   [  57% ] 100/100 VUs    1m43.0s/3m00.0s
+
+running (2m19.7s), 1100/1100 VUs, 1494334 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  58% ] 1000/1000 VUs  1m44.0s/3m00.0s
+write   [  58% ] 100/100 VUs    1m44.0s/3m00.0s
+
+running (2m20.7s), 1100/1100 VUs, 1508691 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  58% ] 1000/1000 VUs  1m45.0s/3m00.0s
+write   [  58% ] 100/100 VUs    1m45.0s/3m00.0s
+
+running (2m21.7s), 1100/1100 VUs, 1525295 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  59% ] 1000/1000 VUs  1m46.0s/3m00.0s
+write   [  59% ] 100/100 VUs    1m46.0s/3m00.0s
+
+running (2m22.7s), 1100/1100 VUs, 1539154 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  59% ] 1000/1000 VUs  1m47.0s/3m00.0s
+write   [  59% ] 100/100 VUs    1m47.0s/3m00.0s
+
+running (2m23.7s), 1100/1100 VUs, 1555693 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  60% ] 1000/1000 VUs  1m48.0s/3m00.0s
+write   [  60% ] 100/100 VUs    1m48.0s/3m00.0s
+
+running (2m24.7s), 1100/1100 VUs, 1570096 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  61% ] 1000/1000 VUs  1m49.0s/3m00.0s
+write   [  61% ] 100/100 VUs    1m49.0s/3m00.0s
+
+running (2m25.7s), 1100/1100 VUs, 1585737 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  61% ] 1000/1000 VUs  1m50.0s/3m00.0s
+write   [  61% ] 100/100 VUs    1m50.0s/3m00.0s
+
+running (2m26.7s), 1100/1100 VUs, 1601536 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  62% ] 1000/1000 VUs  1m51.0s/3m00.0s
+write   [  62% ] 100/100 VUs    1m51.0s/3m00.0s
+
+running (2m27.7s), 1100/1100 VUs, 1615320 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  62% ] 1000/1000 VUs  1m52.0s/3m00.0s
+write   [  62% ] 100/100 VUs    1m52.0s/3m00.0s
+
+running (2m28.7s), 1100/1100 VUs, 1631073 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  63% ] 1000/1000 VUs  1m53.0s/3m00.0s
+write   [  63% ] 100/100 VUs    1m53.0s/3m00.0s
+
+running (2m29.7s), 1100/1100 VUs, 1645542 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  63% ] 1000/1000 VUs  1m54.0s/3m00.0s
+write   [  63% ] 100/100 VUs    1m54.0s/3m00.0s
+
+running (2m30.7s), 1100/1100 VUs, 1660333 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  64% ] 1000/1000 VUs  1m55.0s/3m00.0s
+write   [  64% ] 100/100 VUs    1m55.0s/3m00.0s
+
+running (2m31.7s), 1100/1100 VUs, 1674601 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  64% ] 1000/1000 VUs  1m56.0s/3m00.0s
+write   [  64% ] 100/100 VUs    1m56.0s/3m00.0s
+
+running (2m32.7s), 1100/1100 VUs, 1690677 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  65% ] 1000/1000 VUs  1m57.0s/3m00.0s
+write   [  65% ] 100/100 VUs    1m57.0s/3m00.0s
+
+running (2m33.7s), 1100/1100 VUs, 1707078 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  66% ] 1000/1000 VUs  1m58.0s/3m00.0s
+write   [  66% ] 100/100 VUs    1m58.0s/3m00.0s
+
+running (2m34.7s), 1100/1100 VUs, 1720156 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  66% ] 1000/1000 VUs  1m59.0s/3m00.0s
+write   [  66% ] 100/100 VUs    1m59.0s/3m00.0s
+
+running (2m35.7s), 1100/1100 VUs, 1736551 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  67% ] 1000/1000 VUs  2m00.0s/3m00.0s
+write   [  67% ] 100/100 VUs    2m00.0s/3m00.0s
+
+running (2m36.7s), 1100/1100 VUs, 1751881 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  67% ] 1000/1000 VUs  2m01.0s/3m00.0s
+write   [  67% ] 100/100 VUs    2m01.0s/3m00.0s
+
+running (2m37.7s), 1100/1100 VUs, 1767703 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  68% ] 1000/1000 VUs  2m02.0s/3m00.0s
+write   [  68% ] 100/100 VUs    2m02.0s/3m00.0s
+
+running (2m38.7s), 1100/1100 VUs, 1781954 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  68% ] 1000/1000 VUs  2m03.0s/3m00.0s
+write   [  68% ] 100/100 VUs    2m03.0s/3m00.0s
+
+running (2m39.7s), 1100/1100 VUs, 1798455 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  69% ] 1000/1000 VUs  2m04.0s/3m00.0s
+write   [  69% ] 100/100 VUs    2m04.0s/3m00.0s
+
+running (2m40.7s), 1100/1100 VUs, 1813798 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  69% ] 1000/1000 VUs  2m05.0s/3m00.0s
+write   [  69% ] 100/100 VUs    2m05.0s/3m00.0s
+
+running (2m41.7s), 1100/1100 VUs, 1829084 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  70% ] 1000/1000 VUs  2m06.0s/3m00.0s
+write   [  70% ] 100/100 VUs    2m06.0s/3m00.0s
+
+running (2m42.7s), 1100/1100 VUs, 1841958 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  71% ] 1000/1000 VUs  2m07.0s/3m00.0s
+write   [  71% ] 100/100 VUs    2m07.0s/3m00.0s
+
+running (2m43.7s), 1100/1100 VUs, 1858478 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  71% ] 1000/1000 VUs  2m08.0s/3m00.0s
+write   [  71% ] 100/100 VUs    2m08.0s/3m00.0s
+
+running (2m44.7s), 1100/1100 VUs, 1873961 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  72% ] 1000/1000 VUs  2m09.0s/3m00.0s
+write   [  72% ] 100/100 VUs    2m09.0s/3m00.0s
+
+running (2m45.8s), 1100/1100 VUs, 1890632 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  72% ] 1000/1000 VUs  2m10.1s/3m00.0s
+write   [  72% ] 100/100 VUs    2m10.1s/3m00.0s
+
+running (2m46.7s), 1100/1100 VUs, 1903589 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  73% ] 1000/1000 VUs  2m11.0s/3m00.0s
+write   [  73% ] 100/100 VUs    2m11.0s/3m00.0s
+
+running (2m47.7s), 1100/1100 VUs, 1919968 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  73% ] 1000/1000 VUs  2m12.0s/3m00.0s
+write   [  73% ] 100/100 VUs    2m12.0s/3m00.0s
+
+running (2m48.7s), 1100/1100 VUs, 1935302 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  74% ] 1000/1000 VUs  2m13.0s/3m00.0s
+write   [  74% ] 100/100 VUs    2m13.0s/3m00.0s
+
+running (2m49.7s), 1100/1100 VUs, 1950656 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  74% ] 1000/1000 VUs  2m14.0s/3m00.0s
+write   [  74% ] 100/100 VUs    2m14.0s/3m00.0s
+
+running (2m50.7s), 1100/1100 VUs, 1964908 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  75% ] 1000/1000 VUs  2m15.0s/3m00.0s
+write   [  75% ] 100/100 VUs    2m15.0s/3m00.0s
+
+running (2m51.7s), 1100/1100 VUs, 1981451 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  76% ] 1000/1000 VUs  2m16.0s/3m00.0s
+write   [  76% ] 100/100 VUs    2m16.0s/3m00.0s
+
+running (2m52.7s), 1100/1100 VUs, 1996974 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  76% ] 1000/1000 VUs  2m17.0s/3m00.0s
+write   [  76% ] 100/100 VUs    2m17.0s/3m00.0s
+
+running (2m53.7s), 1100/1100 VUs, 2011304 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  77% ] 1000/1000 VUs  2m18.0s/3m00.0s
+write   [  77% ] 100/100 VUs    2m18.0s/3m00.0s
+
+running (2m54.7s), 1100/1100 VUs, 2026832 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  77% ] 1000/1000 VUs  2m19.0s/3m00.0s
+write   [  77% ] 100/100 VUs    2m19.0s/3m00.0s
+
+running (2m55.7s), 1100/1100 VUs, 2043266 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  78% ] 1000/1000 VUs  2m20.0s/3m00.0s
+write   [  78% ] 100/100 VUs    2m20.0s/3m00.0s
+
+running (2m56.7s), 1100/1100 VUs, 2058055 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  78% ] 1000/1000 VUs  2m21.0s/3m00.0s
+write   [  78% ] 100/100 VUs    2m21.0s/3m00.0s
+
+running (2m57.7s), 1100/1100 VUs, 2072448 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  79% ] 1000/1000 VUs  2m22.0s/3m00.0s
+write   [  79% ] 100/100 VUs    2m22.0s/3m00.0s
+
+running (2m58.7s), 1100/1100 VUs, 2088141 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  79% ] 1000/1000 VUs  2m23.0s/3m00.0s
+write   [  79% ] 100/100 VUs    2m23.0s/3m00.0s
+
+running (2m59.8s), 1100/1100 VUs, 2103641 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  80% ] 1000/1000 VUs  2m24.1s/3m00.0s
+write   [  80% ] 100/100 VUs    2m24.1s/3m00.0s
+
+running (3m00.7s), 1100/1100 VUs, 2116716 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  81% ] 1000/1000 VUs  2m25.0s/3m00.0s
+write   [  81% ] 100/100 VUs    2m25.0s/3m00.0s
+
+running (3m01.7s), 1100/1100 VUs, 2122036 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  81% ] 1000/1000 VUs  2m26.0s/3m00.0s
+write   [  81% ] 100/100 VUs    2m26.0s/3m00.0s
+
+running (3m02.7s), 1100/1100 VUs, 2127076 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  82% ] 1000/1000 VUs  2m27.0s/3m00.0s
+write   [  82% ] 100/100 VUs    2m27.0s/3m00.0s
+
+running (3m03.7s), 1100/1100 VUs, 2132365 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  82% ] 1000/1000 VUs  2m28.0s/3m00.0s
+write   [  82% ] 100/100 VUs    2m28.0s/3m00.0s
+
+running (3m04.7s), 1100/1100 VUs, 2141084 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  83% ] 1000/1000 VUs  2m29.0s/3m00.0s
+write   [  83% ] 100/100 VUs    2m29.0s/3m00.0s
+
+running (3m05.7s), 1100/1100 VUs, 2155564 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  83% ] 1000/1000 VUs  2m30.0s/3m00.0s
+write   [  83% ] 100/100 VUs    2m30.0s/3m00.0s
+
+running (3m06.7s), 1067/1100 VUs, 2171054 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  84% ] 0969/1000 VUs  2m31.0s/3m00.0s
+write   [  84% ] 098/100 VUs    2m31.0s/3m00.0s
+
+running (3m07.7s), 1034/1100 VUs, 2185805 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  84% ] 0939/1000 VUs  2m32.0s/3m00.0s
+write   [  84% ] 095/100 VUs    2m32.0s/3m00.0s
+
+running (3m08.7s), 0994/1100 VUs, 2201088 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  85% ] 0903/1000 VUs  2m33.0s/3m00.0s
+write   [  85% ] 091/100 VUs    2m33.0s/3m00.0s
+
+running (3m09.7s), 0957/1100 VUs, 2218154 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  86% ] 0869/1000 VUs  2m34.0s/3m00.0s
+write   [  86% ] 088/100 VUs    2m34.0s/3m00.0s
+
+running (3m10.7s), 0920/1100 VUs, 2233478 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  86% ] 0836/1000 VUs  2m35.0s/3m00.0s
+write   [  86% ] 084/100 VUs    2m35.0s/3m00.0s
+
+running (3m11.7s), 0883/1100 VUs, 2250167 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  87% ] 0802/1000 VUs  2m36.0s/3m00.0s
+write   [  87% ] 081/100 VUs    2m36.0s/3m00.0s
+
+running (3m12.7s), 0847/1100 VUs, 2265680 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  87% ] 0769/1000 VUs  2m37.0s/3m00.0s
+write   [  87% ] 078/100 VUs    2m37.0s/3m00.0s
+
+running (3m13.7s), 0809/1100 VUs, 2282522 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  88% ] 0735/1000 VUs  2m38.0s/3m00.0s
+write   [  88% ] 074/100 VUs    2m38.0s/3m00.0s
+
+running (3m14.7s), 0773/1100 VUs, 2298151 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  88% ] 0702/1000 VUs  2m39.0s/3m00.0s
+write   [  88% ] 071/100 VUs    2m39.0s/3m00.0s
+
+running (3m15.7s), 0737/1100 VUs, 2314003 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  89% ] 0670/1000 VUs  2m40.0s/3m00.0s
+write   [  89% ] 067/100 VUs    2m40.0s/3m00.0s
+
+running (3m16.7s), 0705/1100 VUs, 2328723 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  89% ] 0640/1000 VUs  2m41.0s/3m00.0s
+write   [  89% ] 065/100 VUs    2m41.0s/3m00.0s
+
+running (3m17.7s), 0664/1100 VUs, 2345648 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  90% ] 0602/1000 VUs  2m42.0s/3m00.0s
+write   [  90% ] 062/100 VUs    2m42.0s/3m00.0s
+
+running (3m18.7s), 0626/1100 VUs, 2361036 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  91% ] 0569/1000 VUs  2m43.0s/3m00.0s
+write   [  91% ] 057/100 VUs    2m43.0s/3m00.0s
+
+running (3m19.7s), 0589/1100 VUs, 2377931 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  91% ] 0535/1000 VUs  2m44.0s/3m00.0s
+write   [  91% ] 054/100 VUs    2m44.0s/3m00.0s
+
+running (3m20.7s), 0554/1100 VUs, 2393281 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  92% ] 0503/1000 VUs  2m45.0s/3m00.0s
+write   [  92% ] 051/100 VUs    2m45.0s/3m00.0s
+
+running (3m21.7s), 0517/1100 VUs, 2410429 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  92% ] 0469/1000 VUs  2m46.0s/3m00.0s
+write   [  92% ] 048/100 VUs    2m46.0s/3m00.0s
+
+running (3m22.7s), 0479/1100 VUs, 2425910 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  93% ] 0435/1000 VUs  2m47.0s/3m00.0s
+write   [  93% ] 044/100 VUs    2m47.0s/3m00.0s
+
+running (3m23.7s), 0443/1100 VUs, 2443244 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  93% ] 0402/1000 VUs  2m48.0s/3m00.0s
+write   [  93% ] 041/100 VUs    2m48.0s/3m00.0s
+
+running (3m24.7s), 0407/1100 VUs, 2458789 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  94% ] 0369/1000 VUs  2m49.0s/3m00.0s
+write   [  94% ] 038/100 VUs    2m49.0s/3m00.0s
+
+running (3m25.7s), 0369/1100 VUs, 2475721 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  94% ] 0335/1000 VUs  2m50.0s/3m00.0s
+write   [  94% ] 034/100 VUs    2m50.0s/3m00.0s
+
+running (3m26.7s), 0333/1100 VUs, 2491512 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  95% ] 0302/1000 VUs  2m51.0s/3m00.0s
+write   [  95% ] 031/100 VUs    2m51.0s/3m00.0s
+
+running (3m27.7s), 0296/1100 VUs, 2508013 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  96% ] 0269/1000 VUs  2m52.0s/3m00.0s
+write   [  96% ] 027/100 VUs    2m52.0s/3m00.0s
+
+running (3m28.7s), 0259/1100 VUs, 2523613 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  96% ] 0235/1000 VUs  2m53.0s/3m00.0s
+write   [  96% ] 024/100 VUs    2m53.0s/3m00.0s
+
+running (3m29.7s), 0222/1100 VUs, 2539483 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  97% ] 0201/1000 VUs  2m54.0s/3m00.0s
+write   [  97% ] 021/100 VUs    2m54.0s/3m00.0s
+
+running (3m30.7s), 0185/1100 VUs, 2554849 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  97% ] 0168/1000 VUs  2m55.0s/3m00.0s
+write   [  97% ] 017/100 VUs    2m55.0s/3m00.0s
+
+running (3m31.7s), 0146/1100 VUs, 2572404 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  98% ] 0132/1000 VUs  2m56.1s/3m00.0s
+write   [  98% ] 014/100 VUs    2m56.1s/3m00.0s
+
+running (3m32.7s), 0113/1100 VUs, 2585215 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  98% ] 0102/1000 VUs  2m57.0s/3m00.0s
+write   [  98% ] 011/100 VUs    2m57.0s/3m00.0s
+
+running (3m33.7s), 0075/1100 VUs, 2600985 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  99% ] 0068/1000 VUs  2m58.0s/3m00.0s
+write   [  99% ] 007/100 VUs    2m58.0s/3m00.0s
+
+running (3m34.7s), 0039/1100 VUs, 2617368 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [  99% ] 0035/1000 VUs  2m59.0s/3m00.0s
+write   [  99% ] 004/100 VUs    2m59.0s/3m00.0s
+
+running (3m35.7s), 0003/1100 VUs, 2627343 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read    [ 100% ] 0002/1000 VUs  3m00.0s/3m00.0s
+write   [ 100% ] 001/100 VUs    3m00.0s/3m00.0s
+
+running (3m35.7s), 0000/1100 VUs, 2627371 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read  ✓ [ 100% ] 0000/1000 VUs  3m0s      
+write ✓ [ 100% ] 000/100 VUs    3m0s      
+
+running (3m35.7s), 0000/1100 VUs, 2627371 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read  ✓ [ 100% ] 0000/1000 VUs  3m0s      
+write ✓ [ 100% ] 000/100 VUs    3m0s      
+
+
+  █ THRESHOLDS 
+
+    read_errors
+    ✓ 'rate<0.05' rate=0.00%
+
+    read_latency
+    ✓ 'p(95)<200' p(95)=102.3ms
+
+    write_errors
+    ✓ 'rate<0.01' rate=0.13%
+
+    write_latency
+    ✗ 'p(95)<500' p(95)=509.05ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 2626871 12179.036729/s
+    checks_succeeded...: 99.99%  2626757 out of 2626871
+    checks_failed......: 0.00%   114 out of 2626871
+
+    ✓ read 302
+    ✗ write 201
+      ↳  99% — ✓ 85355 / ✗ 114
+
+    CUSTOM
+    read_errors....................: 0.00%   0 out of 2541402
+    read_latency...................: avg=40.32ms  min=798.8µs  med=34.64ms max=980.28ms p(90)=66.42ms  p(95)=102.3ms 
+    write_errors...................: 0.13%   114 out of 85469
+    write_latency..................: avg=139.28ms min=2.22ms   med=51.7ms  max=2.74s    p(90)=439.62ms p(95)=509.05ms
+
+    HTTP
+    http_req_duration..............: avg=43.54ms  min=798.8µs  med=34.99ms max=2.74s    p(90)=69.76ms  p(95)=113.94ms
+      { expected_response:true }...: avg=43.53ms  min=798.8µs  med=34.99ms max=2.74s    p(90)=69.74ms  p(95)=113.88ms
+    http_req_failed................: 0.00%   114 out of 2627571
+    http_reqs......................: 2627571 12182.282159/s
+
+    EXECUTION
+    iteration_duration.............: avg=53.11ms  min=884.98µs med=41.69ms max=2.74s    p(90)=97.99ms  p(95)=150.96ms
+    iterations.....................: 2627371 12181.354894/s
+    vus............................: 2       min=0              max=1100
+    vus_max........................: 1100    min=1100           max=1100
+
+    NETWORK
+    data_received..................: 682 MB  3.2 MB/s
+    data_sent......................: 309 MB  1.4 MB/s
+
+
+
+
+running (3m35.7s), 0000/1100 VUs, 2627371 complete and 0 interrupted iterations
+seed  ✓ [ 100% ] 10 VUs         02.1s/30s  500/500 shared iters
+read  ✓ [ 100% ] 0000/1000 VUs  3m0s      
+write ✓ [ 100% ] 000/100 VUs    3m0s      
+time="2026-04-13T03:45:38Z" level=error msg="thresholds on metrics 'write_latency' have been crossed"

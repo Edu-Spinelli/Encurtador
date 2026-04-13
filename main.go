@@ -51,7 +51,14 @@ func main() {
 		log.Fatalf("falha ao pingar PostgreSQL: %v", err)
 	}
 
+	dbRead, err := sql.Open("postgres", cfg.DatabaseReadURL)
+	if err != nil {
+		log.Fatalf("falha ao conectar no PostgreSQL (read): %v", err)
+	}
+	defer dbRead.Close()
+
 	repo := repository.NewPostgres(db)
+	repoRead := repository.NewPostgres(dbRead)
 	if err := repo.Migrate(); err != nil {
 		log.Fatalf("falha ao rodar migration: %v", err)
 	}
@@ -69,7 +76,7 @@ func main() {
 	shortenService := shorten.NewService(cfg.BaseURL, idGenerator, enc, repo)
 	shortenHandler := shorten.NewHandler(shortenService)
 
-	redirectService := redirect.NewService(repo, rdb)
+	redirectService := redirect.NewService(repoRead, rdb)
 	redirectHandler := redirect.NewHandler(redirectService)
 
 	statsHandler := stats.NewHandler()

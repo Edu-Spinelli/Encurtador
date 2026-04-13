@@ -1,0 +1,51 @@
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#7c3aed', 'primaryTextColor': '#fff', 'primaryBorderColor': '#7c3aed', 'lineColor': '#a78bfa', 'secondaryColor': '#1e1b4b', 'tertiaryColor': '#0f172a', 'background': '#09090b', 'mainBkg': '#18181b', 'nodeBorder': '#3f3f46', 'clusterBkg': '#18181b', 'clusterBorder': '#3f3f46', 'titleColor': '#fafafa', 'edgeLabelBackground': '#18181b', 'fontFamily': 'system-ui' }}}%%
+
+flowchart TB
+    USERS["Milhoes de usuarios"]
+
+    subgraph LB["Load Balancer"]
+        NGINX["Nginx / ALB"]
+    end
+
+    subgraph INSTANCES["Go API (stateless, N instancias)"]
+        direction LR
+        GO1["Go API 1"]
+        GO2["Go API 2"]
+        GO3["Go API 3"]
+        GON["Go API N..."]
+    end
+
+    subgraph REDIS_C["Redis Cluster"]
+        direction LR
+        R1["Primary<br/>INCR + Cache"]
+        R2["Replica 1"]
+        R3["Replica 2"]
+    end
+
+    subgraph PG_C["PostgreSQL"]
+        direction LR
+        PG_P["Primary<br/>(escrita)"]
+        PG_R1["Replica 1<br/>(leitura)"]
+        PG_R2["Replica 2<br/>(leitura)"]
+    end
+
+    USERS --> NGINX
+    NGINX --> GO1
+    NGINX --> GO2
+    NGINX --> GO3
+    NGINX --> GON
+
+    GO1 & GO2 & GO3 & GON --> R1
+    R1 --> R2
+    R1 --> R3
+
+    GO1 & GO2 & GO3 & GON -->|"escrita"| PG_P
+    GO1 & GO2 & GO3 & GON -->|"leitura"| PG_R1
+    GO1 & GO2 & GO3 & GON -->|"leitura"| PG_R2
+    PG_P -->|"replicacao"| PG_R1
+    PG_P -->|"replicacao"| PG_R2
+
+    style LB fill:#1e1b4b,stroke:#7c3aed,stroke-width:2px
+    style INSTANCES fill:#18181b,stroke:#22c55e,stroke-width:2px
+    style REDIS_C fill:#1c1917,stroke:#dc2626,stroke-width:2px
+    style PG_C fill:#0c1a3a,stroke:#3b82f6,stroke-width:2px
